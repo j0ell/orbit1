@@ -52,7 +52,7 @@ public class JsonArrayToList {
             //gpstestclass satelliteData = objectMapper.readValue(fileInputStream, gpstestclass.class);
             List<tlesat> satelliteDataList = objectMapper.readValue(fileInputStream, new TypeReference<List<tlesat>>() {});
 
-            tlesat tlesat = satelliteDataList.get(203);
+            tlesat tlesat = satelliteDataList.get(9990);
             String name = tlesat.getOBJECT_NAME();
             System.out.println("object name: " + name);
             String id = tlesat.getOBJECT_ID();
@@ -78,8 +78,8 @@ public class JsonArrayToList {
             vortex testvortex = inclorbit.get(90); //geht
             double zval = testvortex.getZval();
             System.out.println("zval: " + zval);
-            double testradius = orbit.getRadius(testvortex); //ca. 2 km of of periapsis? why? FIXED RE=6378 and r in vortex
-            System.out.println(testradius);
+            //double testradius = orbit.getRadius(testvortex); //ca. 2 km of of periapsis? why? FIXED RE=6378 and r in vortex
+            //System.out.println(testradius);
             double inc = orbit.getIncl();
             System.out.println("inclination: " + inc);
             double x = testvortex.getXval();
@@ -88,7 +88,7 @@ public class JsonArrayToList {
             System.out.println("y: " + y);
             double z = testvortex.getZval();
             System.out.println("z: " + z);
-            System.out.println(testradius); //FALSCH!!!!!!!!! Z NEU BERECHNEN!!!!!!!!
+            //System.out.println(testradius); //FALSCH!!!!!!!!! Z NEU BERECHNEN!!!!!!!!
             double smallestradius = rapo;
             for (vortex point : inclorbit) {
                 double rad = orbit.getRadius(point);
