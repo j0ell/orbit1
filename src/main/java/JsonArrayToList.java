@@ -52,38 +52,42 @@ public class JsonArrayToList {
             //gpstestclass satelliteData = objectMapper.readValue(fileInputStream, gpstestclass.class);
             List<tlesat> satelliteDataList = objectMapper.readValue(fileInputStream, new TypeReference<List<tlesat>>() {});
 
-            tlesat tlesat = satelliteDataList.get(10);
+            tlesat tlesat = satelliteDataList.get(203);
+            String name = tlesat.getOBJECT_NAME();
+            System.out.println("object name: " + name);
+            String id = tlesat.getOBJECT_ID();
+            System.out.println("object id: " + id);
             orbit_1 orbit = new orbit_1(tlesat);
             tlesat.setOrbit(orbit);
             double biga = tlesat.getOrbit().getBiga();
-            System.out.println(biga);
+            System.out.println("große halbachse a: " + biga);
             double ecc = tlesat.getOrbit().getNum_e();
-            System.out.println(ecc);
+            System.out.println("num_e: " + ecc);
             double rperi = tlesat.getOrbit().getRperi();
-            System.out.println(rperi);
+            System.out.println("rperi: " + rperi);
             double rapo = tlesat.getOrbit().getRapo();
-            System.out.println(rapo);
+            System.out.println("rapo: " + rapo);
             double n = tlesat.getMEAN_MOTION();
-            System.out.println(n);
+            System.out.println("mean motion n: " + n);
             double hapo = tlesat.getOrbit().getHapo();
-            System.out.println(hapo);
+            System.out.println("hapo: " + hapo);
             double hperi = tlesat.getOrbit().getHperi();
-            System.out.println(hperi);
+            System.out.println("hperi: " + hperi);
             List<vortex> flatorbit = tlesat.getOrbit().getFlatOrbit(tlesat);
             List<vortex> inclorbit = tlesat.getOrbit().RotateIncl(flatorbit);
             vortex testvortex = inclorbit.get(90); //geht
             double zval = testvortex.getZval();
-            System.out.println(zval);
+            System.out.println("zval: " + zval);
             double testradius = orbit.getRadius(testvortex); //ca. 2 km of of periapsis? why? FIXED RE=6378 and r in vortex
             System.out.println(testradius);
             double inc = orbit.getIncl();
-            System.out.println(inc);
+            System.out.println("inclination: " + inc);
             double x = testvortex.getXval();
-            System.out.println(x);
+            System.out.println("x: " + x);
             double y = testvortex.getYval();
-            System.out.println(y);
+            System.out.println("y: " + y);
             double z = testvortex.getZval();
-            System.out.println(z);
+            System.out.println("z: " + z);
             System.out.println(testradius); //FALSCH!!!!!!!!! Z NEU BERECHNEN!!!!!!!!
             double smallestradius = rapo;
             for (vortex point : inclorbit) {
@@ -93,7 +97,7 @@ public class JsonArrayToList {
                 }
                 //System.out.println(smallestradius);
             }
-            System.out.println(smallestradius);
+            System.out.println("calculated rperi: " + smallestradius);
 
             double biggestradius = rperi;
 
@@ -103,7 +107,7 @@ public class JsonArrayToList {
                     biggestradius = rad;
                 }
             }
-            System.out.println(biggestradius);
+            System.out.println("calculated rapo: " + biggestradius);
 
             /*
             for (vortex point : inclorbit) {
