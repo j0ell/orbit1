@@ -16,7 +16,7 @@ public class vortex {
         this.yval = y;//(int) y; //
         this.zval = z;//(int) z; //
         this.theta = 0;
-        this.radius = 0;
+        this.radius = Math.sqrt((x * x) + (y * y) + (z * z));
     }
 
     public void setRadius(double radius){

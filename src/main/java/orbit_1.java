@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+//import static sun.awt.windows.ThemeReader.getPoint;
+
 public class orbit_1 {
     double hperi; //height peri
     double hapo; //height apo
@@ -58,6 +60,18 @@ public class orbit_1 {
         vortex.setRadius(radius);
         return vortex;
     }
+
+
+    public double getVelocity(vortex point) {
+        double radius = point.getRadius();
+        double a = getBiga();
+        double insqrt = mue * ((2 / radius) - (1 / a)); //numbers in square root
+        double velocity = Math.sqrt(insqrt); //visviva
+        return velocity;
+        }
+
+
+
 
     public List<vortex> getFlatOrbit(tlesat tlesat) {
         List<vortex> flatorbit = new ArrayList<>();
