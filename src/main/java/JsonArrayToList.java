@@ -47,6 +47,12 @@ public class JsonArrayToList {
                 throw new IllegalArgumentException("file not found!");
             }
 
+
+
+            /*
+            Um Geschwindigikeit zu berechnen: Abstand von Punkt zu nächsten Pubkt berechnene
+            mit Abstand / geschwindigkeit verhältnis berechnen, wie lange der punkt angezeigt werden muss
+             */
             // Read the JSON file and map to SatelliteData class
             //gpstestclass satelliteData = objectMapper.readValue(new File(fileUrl.getFile()), gpstestclass.class);
             //gpstestclass satelliteData = objectMapper.readValue(fileInputStream, gpstestclass.class);

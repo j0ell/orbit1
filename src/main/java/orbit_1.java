@@ -76,7 +76,7 @@ public class orbit_1 {
     public List<vortex> getFlatOrbit(tlesat tlesat) {
         List<vortex> flatorbit = new ArrayList<>();
         //double argperi = Math.toRadians(tlesat.getARG_OF_PERICENTER()); //Arg of Pericenter in radians
-        for (double i = 0; i < 2 * Math.PI; i = i + ((2 * Math.PI) / 360) ) { //for every degree in 360 degrees
+        for (double i = 0; i < 2 * Math.PI; i = i + ((2 * Math.PI) / 720) ) { //was 360!! test!!//for every degree in 360 degrees
             vortex point = getPoint(i); //berechnet x und y mit getpoint funktion
             point.setTheta(i); //setzt hoffentlich jeden point seinen winkel zu
             flatorbit.add(point); //added point zur liste
