@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="863bc51f-1b56-495b-8709-052b792f6416" name="Changes" comment="jsontoarray">
-      <change afterPath="$PROJECT_DIR$/jackson-databind-2.17.1.pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/libs/jackson-databind-2.17.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/JsonArrayToList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gpstestclass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/orbit_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tlesat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/vortex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/dataset1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/gpstest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/JsonArrayToList$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/JsonArrayToList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dataset1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/gpstest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/gpstestclass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/orbit_1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/tlesat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="863bc51f-1b56-495b-8709-052b792f6416" name="Changes" comment="orbit rotation should work" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +87,7 @@
       <updated>1718283742750</updated>
       <workItem from="1718283743876" duration="11327000" />
       <workItem from="1718803873843" duration="26563000" />
-      <workItem from="1718972282645" duration="11813000" />
+      <workItem from="1718972282645" duration="12144000" />
     </task>
     <task id="LOCAL-00001" summary="jsontoarray">
       <option name="closed" value="true" />
@@ -115,7 +97,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718816034428</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="orbit rotation should work">
+      <option name="closed" value="true" />
+      <created>1719020863066</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719020863066</updated>
+    </task>
+    <task id="LOCAL-00003" summary="orbit rotation should work">
+      <option name="closed" value="true" />
+      <created>1719020908551</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719020908551</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +121,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="jsontoarray" />
-    <option name="LAST_COMMIT_MESSAGE" value="jsontoarray" />
+    <MESSAGE value="orbit rotation should work" />
+    <option name="LAST_COMMIT_MESSAGE" value="orbit rotation should work" />
   </component>
 </project>
