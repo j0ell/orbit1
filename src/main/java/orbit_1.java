@@ -10,11 +10,11 @@ public class orbit_1 {
     double hapo; //height apo
     double rperi; //radius peri
     double rapo; //radius apo
-    double biga; //große halbachse
+    static double biga; //große halbachse
     double lin_e; //lineare exzentrität
     double num_e; //numerische exzentrität
     double incl; //inclination
-    double mue = 398600.44; //mue erde
+    static double mue = 398600.44; //mue erde
     double mean_motion; //n = sqrt(mue / a^3)
     double Period;
     double Re = 6378;
@@ -62,7 +62,7 @@ public class orbit_1 {
     }
 
 
-    public double getVelocity(vortex point) {
+    public static double getVelocity(vortex point) {
         double radius = point.getRadius();
         double a = getBiga();
         double insqrt = mue * ((2 / radius) - (1 / a)); //numbers in square root
@@ -195,7 +195,7 @@ public class orbit_1 {
         return rapo;
     }
 
-    public double getBiga() {
+    public static double getBiga() {
         return biga;
     }
 

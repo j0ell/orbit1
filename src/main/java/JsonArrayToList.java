@@ -81,6 +81,8 @@ public class JsonArrayToList {
             System.out.println("hperi: " + hperi);
             List<vortex> flatorbit = tlesat.getOrbit().getFlatOrbit(tlesat);
             List<vortex> inclorbit = tlesat.getOrbit().RotateIncl(flatorbit);
+            double testdistance = satellite.DistanceGetter(inclorbit, 0);
+            System.out.println("testdistance: " + testdistance);
             vortex testvortex = inclorbit.get(90); //geht
             double zval = testvortex.getZval();
             System.out.println("zval: " + zval);
@@ -116,6 +118,23 @@ public class JsonArrayToList {
                 }
             }
             System.out.println("calculated rapo: " + biggestradius);
+            satellite.Distancer(inclorbit);
+            double distance1 = inclorbit.get(0).getDistance();
+            System.out.println("distance1: " + distance1);
+            double distance2 = inclorbit.get(719).getDistance();
+            System.out.println("distance2: " + distance2);
+            satellite.Showtimer(inclorbit);
+            double showtime1 = inclorbit.get(0).getShowtime();
+            System.out.println("showtime1: " + showtime1);
+            double showtime2 = inclorbit.get(719).getShowtime();
+            System.out.println("showtime2: " + showtime2); //check if calculation works!!!! METHOD IS NOT WORKING FOR LAST POINT!!! FIXED
+            double testx = inclorbit.get(0).getXval();
+            double testx2 = inclorbit.get(719).getXval();
+            System.out.println("testx: " + testx);
+            System.out.println("testx2: " + testx2);
+            double testvelo = orbit_1.getVelocity(inclorbit.get(719));
+            System.out.println("testvelo: " + testvelo);
+
 
             /*
             for (vortex point : inclorbit) {
